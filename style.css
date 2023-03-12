@@ -1,0 +1,256 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+:root {
+    /* Primary-color */
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+
+    /* Neutral-color */
+    --VeryDarkBlue: hsl(234, 12%, 34%);
+    --GrayishBlue: hsl(229, 6%, 66%);
+    --VeryLightGray: hsl(0, 0%, 98%);
+
+    /* font-size  */
+    font-size: 15px, 24px, 36px;
+
+}
+
+body {
+    font-size: 15px;
+    font-family: Poppins;
+    font-style: normal;
+    background-color: var(--VeryLightGray);
+}
+
+img {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    left: 254px;
+    top: 154px;
+}
+
+/* sections */
+.container-one,
+.container-two {
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid black; */
+}
+
+/* section-one */
+.container-one>.one {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 80px 0px 64px 0px;
+    /* border: 2px solid black; */
+    width: 540px;
+    height: 168px;
+    text-align: center;
+}
+
+.header {
+    width: 444;
+    height: 102;
+    overflow: hidden;
+}
+
+p.paragraph-one {
+    color: var(--VeryDarkBlue);
+    font-size: 34px;
+    font-weight: 275px;
+    line-height: 50px;
+    letter-spacing: 0.25px;
+    opacity: 0.5;
+}
+
+p.paragraph-two {
+    color: var(--VeryDarkBlue);
+    font-size: 36px;
+    font-weight: 600px;
+    line-height: 50px;
+    letter-spacing: 0.25px;
+}
+
+.one>.paragraph {
+    color: var(--GrayishBlue);
+    opacity: 50%;
+    line-height: 25px;
+    letter-spacing: 0.1px;
+    font-weight: 400px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+/* section-two */
+
+.container-two>.two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 80px;
+    width: 1110px;
+    height: 530px;
+    /* border: 2px solid black; */
+}
+
+/* four-card-desktop */
+.top,
+.left,
+.right,
+.bottom {
+    width: 350px;
+    height: 250px;
+    padding: 32px;
+    border-radius: 4px;
+    box-shadow: 0px 20px 45px -35px var(--Blue);
+    -webkit-box-shadow: 0px 20px 45px -35px var(--Blue);
+    -moz-box-shadow: 0px 20px 45px -35px var(--Blue);
+}
+
+
+div.top {
+    border-top: 4px solid var(--Red);
+    position: absolute;
+    top: 0px;
+}
+
+div.two>div.left {
+    border-top: 4px solid var(--Cyan);
+    position: absolute;
+    left: 0px;
+}
+
+div.two>div.right {
+    border-top: 4px solid var(--Blue);
+    position: absolute;
+    right: 0px;
+}
+
+div.bottom {
+    border-top: 4px solid var(--Orange);
+    position: absolute;
+    bottom: 0px;
+}
+
+.title {
+    color: var(--VeryDarkBlue);
+    font-size: 20px;
+    font-weight: 600px;
+    line-height: 30px;
+}
+
+.top-paragraph,
+.bottom-paragraph,
+.left-paragraph,
+.right-paragraph {
+    font-size: 13px;
+    line-height: 23px;
+    font-weight: 400px;
+    color: var(--VeryDarkBlue);
+    opacity: 50%;
+}
+
+/* mobile-design */
+@media screen and (max-width:600px) {
+
+    /* section-one */
+    .container-one>.one {
+        width: 311px;
+        height: 161px;
+        text-align: center;
+    }
+
+    .one>.header {
+        width: 297px;
+        height: 70px;
+    }
+
+    p.paragraph-one {
+        color: var(--VeryDarkBlue);
+        font-size: 23px;
+        line-height: 36px;
+    }
+
+    p.paragraph-two {
+        color: var(--VeryDarkBlue);
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .one>.paragraph {
+        color: var(--GrayishBlue);
+        opacity: 50%;
+        line-height: 25px;
+        letter-spacing: 0.1px;
+        font-weight: 400px;
+        height: 75px;
+    }
+
+    /* section-two */
+    .container-two>.two {
+        display: grid;
+        margin-bottom: 53px;
+        width: 375px;
+        height: auto;
+    }
+
+    .top,
+    .left,
+    .right,
+    .bottom {
+        width: 311px;
+        height: 222px;
+        padding: 32px;
+        border-radius: 4px;
+        box-shadow: 0px 20px 45px -35px var(--Blue);
+        margin-bottom: 25px;
+    }
+
+    div.top {
+        border-top: 4px solid var(--Red);
+        position: static;
+    }
+
+    div.two>div.left {
+        border-top: 4px solid var(--Cyan);
+        position: static;
+    }
+
+    div.two>div.right {
+        border-top: 4px solid var(--Blue);
+        position: static;
+    }
+
+    div.bottom {
+        border-top: 4px solid var(--Orange);
+        position: static;
+    }
+
+    img {
+        position: sticky;
+        width: 57px;
+        height: 57px;
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: var(--VeryDarkBlue);
+    padding: 10px;
+}
+
+.attribution a {
+    color: var(--Blue);
+}
