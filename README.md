@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [](https://hedize.github.io/)
+- Live Site URL: [website](https://hedize.github.io/)
 
 ## My process
 
