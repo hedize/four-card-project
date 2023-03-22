@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-  
+
 }
 
 :root {
@@ -29,75 +29,72 @@ body {
     background-color: var(--VeryLightGray);
 }
 
-#image {
-    width: 64px;
-    height: 64px;
-    margin-top: auto;
-    align-self: flex-end;
-   
-}
 
-/* sections */
+
+/* layout */
+
 .layout {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 /* section-one */
 .container-head {
     display: flex;
     flex-direction: column;
-    margin: 80px 0px 64px 0px;
-    border: 2px solid black;
+    margin-top: 80px;
+    margin-bottom: 64px;
     width: 540px;
     height: 168px;
     text-align: center;
+    /* border: 2px solid black; */
 }
 
 
-h3.title-one{
+h3.title-one {
     color: var(--VeryDarkBlue);
-    font-size: 34px;
-    font-weight: 275px;
-    line-height: 50px;
+    font-weight: 275;
+    font-size: 36px;
+    line-height: 54px;
     letter-spacing: 0.25px;
     opacity: 0.5;
 }
 
 h1.title-two {
     color: var(--VeryDarkBlue);
+    font-weight: 600;
     font-size: 36px;
-    font-weight: 600px;
-    line-height: 50px;
+    line-height: 54px;
     letter-spacing: 0.25px;
+    margin-bottom: 16px;
 }
 
 .description-head {
     color: var(--GrayishBlue);
     opacity: 50%;
-    line-height: 25px;
     letter-spacing: 0.1px;
-    font-weight: 400px;
-    margin-top: 16px;
-   
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+
 }
 
 /* section-two */
 
-.container-cards{
+.container-cards {
     display: grid;
-    grid-template-columns: repeat(3 , 1fr);
-    grid-template-rows: repeat(2 , 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-template-areas:
-    "Supervisor TeamBuilder Calculator"
-    "Supervisor Karma Calculator";
+        "Supervisor TeamBuilder Calculator"
+        "Supervisor Karma Calculator";
     margin-bottom: 80px;
     width: 1110px;
     height: 530px;
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 
 /* four-card-desktop */
@@ -114,10 +111,10 @@ h1.title-two {
 
 div.TeamBuilder {
     border-top: 4px solid var(--Red);
-   grid-area:TeamBuilder ;
-   display: flex;
-   flex-direction: column;
-   align-self: flex-start;
+    grid-area: TeamBuilder;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
 }
 
 div.Supervisor {
@@ -130,15 +127,15 @@ div.Supervisor {
 
 div.Calculator {
     border-top: 4px solid var(--Blue);
-   grid-area: Calculator;
-   align-self: center;
-   display: flex;
-   flex-direction: column;
+    grid-area: Calculator;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
 }
 
 div.Karma {
     border-top: 4px solid var(--Orange);
-    grid-area:Karma ;
+    grid-area: Karma;
     display: flex;
     flex-direction: column;
     align-self: flex-end;
@@ -146,102 +143,118 @@ div.Karma {
 
 .title-cards {
     color: var(--VeryDarkBlue);
+    font-weight: 600;
     font-size: 20px;
-    font-weight: 600px;
     line-height: 30px;
 }
 
 .description-cards {
+    font-weight: 400;
     font-size: 13px;
     line-height: 23px;
-    font-weight: 400px;
     color: var(--VeryDarkBlue);
     opacity: 50%;
 }
 
-/* mobile-design */
-@media screen and (max-width:600px) {
+#image {
+    width: 64px;
+    height: 64px;
+    margin-top: auto;
+    align-self: flex-end;
+}
 
-    /* section-one */
-    .container-one>.one {
+/* --tablet -design */
+@media screen and (max-width:768px) {
+    
+    h3.title-one {
+        font-size: 30px;
+        line-height: 45px;
+    }
+
+    h1.title-two {
+        font-size: 30px;
+        line-height: 45px;
+    }
+
+    .container-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "Supervisor TeamBuilder"
+            "Karma Calculator";
+
+        margin-bottom: 80px;
+        width: 700px;
+        height: auto;
+    }
+
+    .container-cards div {
+        width: 311px;
+        height: 222px;
+        margin: 0 20px 23px 20px;
+        padding: 28px;
+    }
+
+    #image {
+        width: 57px;
+        height: 57px;
+    }
+
+}
+
+/* mobile-design */
+@media screen and (max-width:576px) {
+
+    .container-head {
+        margin-top: 85px;
+        margin-bottom: 76px;
         width: 311px;
         height: 161px;
-        text-align: center;
+
     }
 
-    .one>.header {
-        width: 297px;
-        height: 70px;
-    }
-
-    p.paragraph-one {
-        color: var(--VeryDarkBlue);
-        font-size: 23px;
-        line-height: 36px;
-    }
-
-    p.paragraph-two {
-        color: var(--VeryDarkBlue);
+    h3.title-one {
         font-size: 24px;
         line-height: 36px;
     }
 
-    .one>.paragraph {
-        color: var(--GrayishBlue);
-        opacity: 50%;
-        line-height: 25px;
-        letter-spacing: 0.1px;
-        font-weight: 400px;
-        height: 75px;
+    h1.title-two {
+        font-size: 24px;
+        line-height: 36px;
     }
 
-    /* section-two */
-    .container-two>.two {
+    .container-cards {
         display: grid;
-        margin-bottom: 53px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:
+            "Supervisor "
+            "TeamBuilder"
+            "Karma "
+            "Calculator";
+        margin-bottom: 80px;
         width: 375px;
         height: auto;
     }
 
-    .top,
-    .left,
-    .right,
-    .bottom {
+    /* four-card-desktop */
+    .container-cards div {
         width: 311px;
         height: 222px;
-        padding: 32px;
-        border-radius: 4px;
-        box-shadow: 0px 20px 45px -35px var(--Blue);
-        margin-bottom: 25px;
+        margin: 0 32px 23px 32px;
+        padding: 28px;
     }
 
-    div.top {
-        border-top: 4px solid var(--Red);
-        position: static;
-    }
-
-    div.two>div.left {
-        border-top: 4px solid var(--Cyan);
-        position: static;
-    }
-
-    div.two>div.right {
-        border-top: 4px solid var(--Blue);
-        position: static;
-    }
-
-    div.bottom {
-        border-top: 4px solid var(--Orange);
-        position: static;
-    }
-
-    img {
-        position: sticky;
+    #image {
         width: 57px;
         height: 57px;
     }
+
 }
 
+
+/* --footer */
 .attribution {
     font-size: 11px;
     text-align: center;
