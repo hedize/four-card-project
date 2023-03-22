@@ -10,7 +10,6 @@ This is a solution to the [Four card feature section challenge on Frontend Mento
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
 
 
@@ -41,18 +40,6 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - CSS Pseudo-classes :root
-
-
-### What I learned
-
-```html
-<div>Some HTML code I'm proud of</div>
-```
-```css
-.proud-of-this-css {
-  color: var();
-}
-```
 
 ### Continued development
 
