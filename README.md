@@ -1,4 +1,4 @@
-# Frontend Mentor - Four card feature section solution
+# Four card feature section solution
 
 This is a solution to the [Four card feature section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
@@ -26,11 +26,11 @@ Users should be able to:
 
 ### Screenshot
 
-![website screenshot](./img/screenshotdesktop.jpg)
+![website screenshot](./img/screendesktop.jpg)
 
 ### Links
 
-- Live Site URL: [website](https://hedize.github.io/)
+- Live Site URL: [four-cards](https://hedize.github.io/four-card-project/)
 
 ## My process
 
@@ -57,7 +57,7 @@ Users should be able to:
 ### Continued development
 
 - CSS Grid
-- CSS Pseudo-classes
+
 
 
 
