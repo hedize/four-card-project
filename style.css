@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    overflow: auto;
+  
 }
 
 :root {
@@ -29,41 +29,36 @@ body {
     background-color: var(--VeryLightGray);
 }
 
-img {
-    position: absolute;
+#image {
     width: 64px;
     height: 64px;
-    left: 254px;
-    top: 154px;
+    margin-top: auto;
+    align-self: flex-end;
+   
 }
 
 /* sections */
-.container-one,
-.container-two {
+.layout {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    /* border: 2px solid black; */
+    align-items: center;
+    
 }
 
 /* section-one */
-.container-one>.one {
+.container-head {
     display: flex;
     flex-direction: column;
-    gap: 16px;
     margin: 80px 0px 64px 0px;
-    /* border: 2px solid black; */
+    border: 2px solid black;
     width: 540px;
     height: 168px;
     text-align: center;
 }
 
-.header {
-    width: 444;
-    height: 102;
-    overflow: hidden;
-}
 
-p.paragraph-one {
+h3.title-one{
     color: var(--VeryDarkBlue);
     font-size: 34px;
     font-weight: 275px;
@@ -72,7 +67,7 @@ p.paragraph-one {
     opacity: 0.5;
 }
 
-p.paragraph-two {
+h1.title-two {
     color: var(--VeryDarkBlue);
     font-size: 36px;
     font-weight: 600px;
@@ -80,35 +75,33 @@ p.paragraph-two {
     letter-spacing: 0.25px;
 }
 
-.one>.paragraph {
+.description-head {
     color: var(--GrayishBlue);
     opacity: 50%;
     line-height: 25px;
     letter-spacing: 0.1px;
     font-weight: 400px;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
+    margin-top: 16px;
+   
 }
 
 /* section-two */
 
-.container-two>.two {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+.container-cards{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: repeat(2 , 1fr);
+    grid-template-areas:
+    "Supervisor TeamBuilder Calculator"
+    "Supervisor Karma Calculator";
     margin-bottom: 80px;
     width: 1110px;
     height: 530px;
-    /* border: 2px solid black; */
+    border: 2px solid black;
 }
 
 /* four-card-desktop */
-.top,
-.left,
-.right,
-.bottom {
+.container-cards div {
     width: 350px;
     height: 250px;
     padding: 32px;
@@ -119,41 +112,46 @@ p.paragraph-two {
 }
 
 
-div.top {
+div.TeamBuilder {
     border-top: 4px solid var(--Red);
-    position: absolute;
-    top: 0px;
+   grid-area:TeamBuilder ;
+   display: flex;
+   flex-direction: column;
+   align-self: flex-start;
 }
 
-div.two>div.left {
+div.Supervisor {
     border-top: 4px solid var(--Cyan);
-    position: absolute;
-    left: 0px;
+    grid-area: Supervisor;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
 }
 
-div.two>div.right {
+div.Calculator {
     border-top: 4px solid var(--Blue);
-    position: absolute;
-    right: 0px;
+   grid-area: Calculator;
+   align-self: center;
+   display: flex;
+   flex-direction: column;
 }
 
-div.bottom {
+div.Karma {
     border-top: 4px solid var(--Orange);
-    position: absolute;
-    bottom: 0px;
+    grid-area:Karma ;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
 }
 
-.title {
+.title-cards {
     color: var(--VeryDarkBlue);
     font-size: 20px;
     font-weight: 600px;
     line-height: 30px;
 }
 
-.top-paragraph,
-.bottom-paragraph,
-.left-paragraph,
-.right-paragraph {
+.description-cards {
     font-size: 13px;
     line-height: 23px;
     font-weight: 400px;
