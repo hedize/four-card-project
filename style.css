@@ -109,7 +109,7 @@ h1.title-two {
 }
 
 
-div.TeamBuilder {
+div.teambuilder {
     border-top: 4px solid var(--Red);
     grid-area: TeamBuilder;
     display: flex;
@@ -117,7 +117,7 @@ div.TeamBuilder {
     align-self: flex-start;
 }
 
-div.Supervisor {
+div.supervisor {
     border-top: 4px solid var(--Cyan);
     grid-area: Supervisor;
     display: flex;
@@ -125,7 +125,7 @@ div.Supervisor {
     align-self: center;
 }
 
-div.Calculator {
+div.calculator {
     border-top: 4px solid var(--Blue);
     grid-area: Calculator;
     align-self: center;
@@ -133,7 +133,7 @@ div.Calculator {
     flex-direction: column;
 }
 
-div.Karma {
+div.karma {
     border-top: 4px solid var(--Orange);
     grid-area: Karma;
     display: flex;
@@ -164,7 +164,7 @@ div.Karma {
 }
 
 /* --tablet -design */
-@media screen and (max-width:768px) {
+@media screen and (max-width:1025px) {
     
     h3.title-one {
         font-size: 30px;
@@ -204,7 +204,7 @@ div.Karma {
 }
 
 /* mobile-design */
-@media screen and (max-width:576px) {
+@media screen and (max-width:650px) {
 
     .container-head {
         margin-top: 85px;
